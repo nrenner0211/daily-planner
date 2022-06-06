@@ -88,5 +88,10 @@ textarea {
         height: 100%;
         margin: 15px 0px;
     }
+
+    .hour {
+        padding: 25px;
+        font-size: larger;
+    }
 }
   
