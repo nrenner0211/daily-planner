@@ -12,7 +12,7 @@ This project's purpose was to learn about third-party libraries, such as Bootstr
 
 ## Screen Capture
 
-![A .gif of the working app] (assets/images/screen-capture.gif)
+![](assets%5Cimages%5Cscreen-capture.gif)
 
 ## Thanks For Reading
 
