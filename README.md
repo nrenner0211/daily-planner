@@ -12,7 +12,7 @@ This project's purpose was to learn about third-party libraries, such as Bootstr
 
 ## Screen Capture
 
-![Working website](assets%5Cimages%5Cscreen-capture.gif)
+![Working website](./assets/images/screen-capture.gif)
 
 ## Thanks For Reading
 
