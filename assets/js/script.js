@@ -1,6 +1,6 @@
 // time in header
-var currentTime = moment().format('dddd, MMMM Do YYYY, h:mm a');
-$("#currentDay").html(currentTime);
+var currentDay = moment().format('dddd, MMMM Do YYYY, h:mm a');
+$("#currentDay").html(currentDay);
 
 $(document).ready(function() {
     //save event listener
@@ -12,7 +12,7 @@ $(document).ready(function() {
         localStorage.setItem(time, text);
     })
 
-    function timeOfDay() {
+    function timeAudit() {
         
         //get hours
         var timeNow = moment().hour();
@@ -30,7 +30,7 @@ $(document).ready(function() {
 
                 //add new class
                 $(this).addClass("past");
-                
+
             } else if (blockTime === timeNow) {
                 $(this).removeClass("future");
                 $(this).removeClass("past");
@@ -43,6 +43,7 @@ $(document).ready(function() {
         })
     }
 
+    //grab items from localStorage
     $("#hour8 .input").val(localStorage.getItem("hour8"));
     $("#hour9 .input").val(localStorage.getItem("hour9"));
     $("#hour10 .input").val(localStorage.getItem("hour10"));
@@ -53,12 +54,16 @@ $(document).ready(function() {
     $("#hour15 .input").val(localStorage.getItem("hour15"));
     $("#hour16 .input").val(localStorage.getItem("hour16"));
     $("#hour17 .input").val(localStorage.getItem("hour17"));
-    $("#hour18 .input").val(localStorage.getItem("hour17"));
-    $("#hour19 .input").val(localStorage.getItem("hour17"));
-    $("#hour20 .input").val(localStorage.getItem("hour17"));
+    $("#hour18 .input").val(localStorage.getItem("hour18"));
+    $("#hour19 .input").val(localStorage.getItem("hour19"));
+    $("#hour20 .input").val(localStorage.getItem("hour20"));
 
+    timeAudit();
+});
 
-    timeOfDay();
-})
+//refreshes page every 5 miutes
+setInterval(function() {
+    window.location.reload();
+}, 300000);
 
 
